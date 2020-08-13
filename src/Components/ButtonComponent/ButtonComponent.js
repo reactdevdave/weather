@@ -1,8 +1,8 @@
-// Functional component which will receive props reference to the getWeatherHandler() function.
-// import React from 'react';
+// Functional component which will receive props.
+import React from 'react';
 
-// const weatherButton = (props) = {
+const weatherButton = (props) => (
+    <button type="submit" onClick={props.buttonSubmit}>Submit</button>
+)
 
-// }
-
-// export default weatherButton;
+export default weatherButton;

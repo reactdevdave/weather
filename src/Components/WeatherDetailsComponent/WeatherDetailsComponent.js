@@ -1,13 +1,18 @@
 import React from 'react';
 
-const weatherDetails = (props) => (
+const weatherDetails = (props) => {
 
-    // Date, City Name, Current time & temperature
-    <div>
-        <p>{props.newCity}</p>
-        <p>5:00pm</p>
-        <p>101 F</p>
-    </div>
-);
+    return (
 
+        props.weatherData.map((v, i) => {
+            return (
+                <div key={i}>
+                    <p>Date: {v[i].Date}</p>
+                    <p>Time: {v[i].Time}</p>
+                    <p>Temperature: {v[i].temprature} F</p>
+                </div>
+            )
+        })
+    );
+};
 export default weatherDetails;
